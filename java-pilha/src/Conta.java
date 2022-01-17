@@ -1,6 +1,6 @@
 public class Conta {
     
-    void depositar(){
+    void depositar() throws MinhaExecao{
         
     }
 }

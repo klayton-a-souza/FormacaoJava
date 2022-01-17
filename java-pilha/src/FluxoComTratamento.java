@@ -4,7 +4,7 @@ public class FluxoComTratamento {
          System.out.println("Ini do main");
         try{
             metodo1();   
-        }catch(ArithmeticException | NullPointerException | MinhaExecao exception){
+        }catch(Exception exception){
             String mensagem = exception.getMessage();
             System.out.println("Exception: " + mensagem);
             exception.printStackTrace();
