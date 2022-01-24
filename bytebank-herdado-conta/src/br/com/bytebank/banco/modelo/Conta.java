@@ -2,11 +2,12 @@ package br.com.bytebank.banco.modelo;
 
 /**
  * 
- * Classe representa a moldura de uma conta
+ * Classe que representa uma conta no ByteBank
  * 
  * @author Klayton Almeida de Souza
+ * @version 0.1
+ *
  */
-
 
 public abstract class Conta {
 
