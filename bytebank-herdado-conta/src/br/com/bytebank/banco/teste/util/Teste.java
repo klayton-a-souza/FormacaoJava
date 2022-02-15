@@ -1,6 +1,7 @@
 package br.com.bytebank.banco.teste.util;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
@@ -47,10 +48,17 @@ public class Teste {
             System.out.println(conta + ", " + conta.getTitular().getNome());
         }
 
-        NumeroDaContaComparator nComparator = new NumeroDaContaComparator();
-        TitularDaContaComparator tComparator = new TitularDaContaComparator();
+        /*
+         * NumeroDaContaComparator nComparator = new NumeroDaContaComparator();
+         * TitularDaContaComparator tComparator = new TitularDaContaComparator();
+         */
+        lista.sort(new TitularDaContaComparator());
 
-        lista.sort(tComparator);
+        Collections.sort(lista, new NumeroDaContaComparator()); 
+        Collections.sort(lista);//Orden natural
+        //Collections.reverse(lista);
+        //Collections.shuffle(lista); Embaralhando os elementos da lista
+        //Collections.rotate(list, distance); Rotaciona valores da lista
 
         System.out.println("----------------------------------------------------------");
 
@@ -61,7 +69,7 @@ public class Teste {
     }
 }
 
-class TitularDaContaComparator implements Comparator<Conta>{
+class TitularDaContaComparator implements Comparator<Conta> {
 
     @Override
     public int compare(Conta c1, Conta c2) {
@@ -69,7 +77,7 @@ class TitularDaContaComparator implements Comparator<Conta>{
         String nomeC1 = c1.getTitular().getNome();
         String nomeC2 = c2.getTitular().getNome();
         return nomeC1.compareTo(nomeC2);
-        
+
     }
 
 }
@@ -79,14 +87,9 @@ class NumeroDaContaComparator implements Comparator<Conta> {
     @Override
     public int compare(Conta c1, Conta c2) {
 
-        if (c1.getNumero() < c2.getNumero()) {
-            return -1;
-        }
-        if (c1.getNumero() > c2.getNumero()) {
-            return 1;
-        }
+        /* return c1.getNumero() - c2.getNumero(); */
+        return Integer.compare(c1.getNumero(), c2.getNumero());
 
-        return 0;
     }
 
 }
