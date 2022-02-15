@@ -10,7 +10,7 @@ import br.com.bytebank.banco.modelo.Conta;
 import br.com.bytebank.banco.modelo.ContaCorrente;
 import br.com.bytebank.banco.modelo.ContaPoupanca;
 
-public class Teste {
+public class TesteOrdenacao {
 
     public static void main(String[] args) {
 
@@ -44,32 +44,52 @@ public class Teste {
         lista.add(contaCorrente2);
         lista.add(contaPoupanca2);
 
-        //Criando classes anonimas
-
-        lista.sort(new Comparator<Conta>() { 
-
-            @Override
-            public int compare(Conta c1, Conta c2) {
-                return Integer.compare(c1.getNumero(), c2.getNumero());
-
-            }
-
+        for (Conta conta : lista) {
+            System.out.println(conta + ", " + conta.getTitular().getNome());
         }
 
-        );
+        /*
+         * NumeroDaContaComparator nComparator = new NumeroDaContaComparator();
+         * TitularDaContaComparator tComparator = new TitularDaContaComparator();
+         */
+        lista.sort(new TitularDaContaComparator());
 
-        Comparator<Conta> comp = new Comparator<Conta>() {
-            @Override
-            public int compare(Conta c1, Conta c2) {
-                String nomeC1 = c1.getTitular().getNome();
-                String nomeC2 = c2.getTitular().getNome();
-                return nomeC1.compareTo(nomeC2);
-            }
-        };
+        Collections.sort(lista, new NumeroDaContaComparator()); 
+        Collections.sort(lista);//Orden natural
+        //Collections.reverse(lista);
+        //Collections.shuffle(lista); Embaralhando os elementos da lista
+        //Collections.rotate(list, distance); Rotaciona valores da lista
+
+        System.out.println("----------------------------------------------------------");
 
         for (Conta conta : lista) {
             System.out.println(conta + ", " + conta.getTitular().getNome());
         }
 
     }
+}
+
+class TitularDaContaComparator implements Comparator<Conta> {
+
+    @Override
+    public int compare(Conta c1, Conta c2) {
+
+        String nomeC1 = c1.getTitular().getNome();
+        String nomeC2 = c2.getTitular().getNome();
+        return nomeC1.compareTo(nomeC2);
+
+    }
+
+}
+
+class NumeroDaContaComparator implements Comparator<Conta> {
+
+    @Override
+    public int compare(Conta c1, Conta c2) {
+
+        /* return c1.getNumero() - c2.getNumero(); */
+        return Integer.compare(c1.getNumero(), c2.getNumero());
+
+    }
+
 }
