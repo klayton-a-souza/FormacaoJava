@@ -1,4 +1,4 @@
-Nesta aula, daremos início ao nosso curso focado no pacote java.io.
-Atualmente, nenhuma aplicação funciona isoladamente e não receba ou envie dados. 
-Casos em que isto não aconteça são exceções raras.
-Temos, em geral, um fluxo de dados de entrada e outro de saída. 
+Nesta aula, daremos inicio ao nosso curso focado no pacote java.io.
+Atualmente, nenhuma aplicacao funciona isoladamente e nao receba ou envie dados. 
+Casos em que isto nao aconteca sao excecoes raras.
+Temos, em geral, um fluxo de dados de entrada e outro de saida. 

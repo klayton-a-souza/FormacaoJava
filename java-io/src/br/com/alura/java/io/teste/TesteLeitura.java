@@ -3,22 +3,27 @@ package br.com.alura.java.io.teste;
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.Reader;
 
 public class TesteLeitura {
 
     public static void main(String[] args) throws IOException {
 
-        FileInputStream fis = new FileInputStream("lorem.txt");// Entrada do arquivo binarios
-        InputStreamReader isr = new InputStreamReader(fis);// Transformando dados binarios em caracters
+        InputStream fis = new FileInputStream("lorem.txt");//Estabelecer um fluxo de entrada com arquivo
+        Reader isr = new InputStreamReader(fis);// Transformando dados bytes em caracteres
         BufferedReader br = new BufferedReader(isr); // Consegue ler linha atravez do metodo readLine()
 
+        
         String linha = br.readLine();
 
-        System.out.println(linha);
+        while (linha != null) {
+            System.out.println(linha);
+            linha = br.readLine();
+        }
 
         br.close();
-
 
     }
 
