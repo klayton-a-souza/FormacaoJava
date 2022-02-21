@@ -1,3 +1,4 @@
 Nesta aula, daremos inicio ao nosso curso focado no pacote java.io.
 
+
 Atualmente, nenhuma aplicacao funciona isoladamente e nao receba ou envie dados.
