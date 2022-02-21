@@ -12,7 +12,7 @@ public class TesteLeitura2 {
 
         while (scanner.hasNextLine()) {
             String linha = scanner.nextLine();
-            System.out.println(linha);
+            //System.out.println(linha);
 
             Scanner linhaScanner = new Scanner(linha);
             linhaScanner.useLocale(Locale.US); 
@@ -22,13 +22,16 @@ public class TesteLeitura2 {
             //o compilador qual regra deve usar.
             linhaScanner.useDelimiter(",");
 
-            String primeiroValor = linhaScanner.next();
-            int segundoValor = linhaScanner.nextInt();
-            int terceiroValor = linhaScanner.nextInt();
-            String quartoValor = linhaScanner.next();
-            double quintoValor = linhaScanner.nextDouble();
+            String tipoConta = linhaScanner.next();
+            int agencia = linhaScanner.nextInt();
+            int numero = linhaScanner.nextInt();
+            String titular = linhaScanner.next();
+            double saldo = linhaScanner.nextDouble();
 
-            System.out.println(primeiroValor + segundoValor + terceiroValor + quartoValor + quintoValor);
+            
+            System.out.format("%s - %04d-%d %25s: %.2f %n", tipoConta, agencia, numero, titular, saldo);
+
+            //System.out.println(tipoConta + agencia + numero + titular + saldo);
 
             linhaScanner.close();
 
