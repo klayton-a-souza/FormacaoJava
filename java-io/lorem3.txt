@@ -1,6 +1,4 @@
-Testando o System.in
-Aparetemente esta funcionando de boas
-Depois dessa linha e so pra testa 
-asdasd asdasdkalhjsdkjhas dkjh  
-asdlkasldhkajh  aslkdjalskdlaksjd
-alksdlakslakjsd
+Nesta aula, daremos início ao nosso curso focado no pacote java.io.
+
+
+Atualmente, nenhuma aplicacão funciona isoladamente e nao receba ou envie dados.
