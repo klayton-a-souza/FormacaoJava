@@ -4,7 +4,6 @@ import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.NoSuchElementException;
 import java.util.Set;
 
 public class Curso {
@@ -69,8 +68,8 @@ public class Curso {
 
     }
 
-    //LinkedHashMap: A ordem que os elementos são adicionados e mantida.
-    //HashMap: A ordem dos elementos não e garantida.
-    //Hashtable: Segundo quando e trabalhado com varios threads
+    // LinkedHashMap: A ordem que os elementos são adicionados e mantida.
+    // HashMap: A ordem dos elementos não e garantida.
+    // Hashtable: Segundo quando e trabalhado com varios threads
 
 }
