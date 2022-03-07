@@ -1,4 +1,5 @@
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.Set;
 
 public class TestaCursoComAluno {
@@ -28,7 +29,20 @@ public class TestaCursoComAluno {
         });
         //Set<String> nomes = Collections.emptySet();
 
-        System.out.println(javaColeCurso.estaMatriculado(aluno1));
+        System.out.println("O aluno " + aluno1.getNome() + " esta matrículado? " + javaColeCurso.estaMatriculado(aluno1));
+
+
+        Set<Aluno> alunos = javaColeCurso.getAlunos();
+        Iterator<Aluno> iterador = alunos.iterator();
+
+        System.out.println("--------------Testando o Iterator------------------");
+
+        while(iterador.hasNext()){
+            Aluno proximoAluno = iterador.next();
+            System.out.println(proximoAluno);
+        }
+
+        
 
     }
 
