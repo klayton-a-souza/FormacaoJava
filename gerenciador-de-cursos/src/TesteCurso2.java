@@ -15,15 +15,13 @@ public class TesteCurso2 {
         List<Aula> aulasImutaveis = javaColeCurso.getAulas();
         System.out.println(aulasImutaveis);
 
-        List<Aula> aulas = new ArrayList<>(aulasImutaveis); //Criando uma copia da lista imutavel 
+        List<Aula> aulas = new ArrayList<>(aulasImutaveis); // Criando uma copia da lista imutavel
 
         Collections.sort(aulas);
         System.out.println(aulas);
         System.out.println(javaColeCurso.getTempoTotal());
 
         System.out.println(javaColeCurso);
-
-        
 
         /*
          * aulas.forEach(aula -> {

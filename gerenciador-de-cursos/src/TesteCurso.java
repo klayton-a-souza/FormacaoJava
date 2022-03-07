@@ -1,3 +1,4 @@
+
 public class TesteCurso {
 
     public static void main(String[] args) {

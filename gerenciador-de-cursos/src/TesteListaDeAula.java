@@ -13,7 +13,7 @@ public class TesteListaDeAula {
         aulas.add(aula2);
         aulas.add(aula3);
 
-        //System.out.println(aulas);
+        // System.out.println(aulas);
         aulas.forEach(aula -> {
             System.out.println("Aula: " + aula.getTitulo() + ", " +
                     aula.getTempo());
@@ -22,7 +22,7 @@ public class TesteListaDeAula {
         Collections.sort(aulas);
         System.out.println("------------------------");
 
-        //System.out.println(aulas);
+        // System.out.println(aulas);
 
         aulas.forEach(aula -> {
             System.out.println("Aula: " + aula.getTitulo() + ", " +
