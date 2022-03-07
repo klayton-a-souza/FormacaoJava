@@ -26,8 +26,9 @@ public class TestaCursoComAluno {
         javaColeCurso.getAlunos().forEach(aluno -> {
             System.out.println(aluno);
         });
-
         //Set<String> nomes = Collections.emptySet();
+
+        System.out.println(javaColeCurso.estaMatriculado(aluno1));
 
     }
 
