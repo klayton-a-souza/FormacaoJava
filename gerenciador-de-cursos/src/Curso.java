@@ -22,11 +22,24 @@ public class Curso {
     }
 
     public List<Aula> getAulas() {
-        return Collections.unmodifiableList(aulas);
+        return Collections.unmodifiableList(aulas);// Devolve uma lista que so e possivel fazer leitura
     }
 
-    public void adiciona(Aula aula){
+    public void adiciona(Aula aula) {
         this.aulas.add(aula);
+    }
+
+    public int getTempoTotal() {
+        int tempoTotal = 0;
+        for (Aula aula : aulas) {
+            tempoTotal += aula.getTempo();
+        }
+        return tempoTotal;
+    }
+
+    @Override
+    public String toString() {        
+        return "[Curso: " + this.nome + ", tempo total: " + this.getTempoTotal() + ", " + "\nAulas: " + this.aulas + "]";
     }
 
 }
