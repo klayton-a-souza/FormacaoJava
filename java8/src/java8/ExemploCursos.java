@@ -53,6 +53,7 @@ public class ExemploCursos {
 
 		System.out.println("Somatoria de alunos: " + sum);
 		
+		//Filtrando cursos com mais de 50 alunos
 		cursos.stream().filter(c -> c.getAlunos() > 50).forEach(total -> System.out.println(total.getNome()));
 
 	}
